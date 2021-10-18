@@ -13,6 +13,7 @@
             text-align: center;
             font-size: 1.2em;
         }
+
         .kart {
             margin: 20px;
             height: 300px;
@@ -20,36 +21,39 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .mesaj{
+
+        .mesaj {
             background-color: green;
             color: black;
         }
-        .link{
+
+        .link {
             color: blue;
             cursor: pointer;
             text-decoration: underline;
         }
 
 
-
     </style>
 </head>
 <body>
-
 <h2>Kedi Bulmaca</h2>
-<img id="img0" class="kart" src="Mavi.png" onclick="CardButton()"  width="300">
-<img id="img1" class="kart" src="Mavi.png" onclick="CardButton1()"  width="300">
-<img id="img2" class="kart" src="Mavi.png" onclick="CardButton2()"  width="300">
+
+<p class="body">Bu oyunda 3 kapalı kart içindeki kediyi bulman gerekmektedir.
+    İlk tercihte Kedi bulamaz isen 2.seçim hakkı tanıncaktır. </p>
 
 
-
-
+<img id="img0" class="kart" src="Mavi.png" onclick="CardButton()" width="300">
+<img id="img1" class="kart" src="Mavi.png" onclick="CardButton1()" width="300">
+<img id="img2" class="kart" src="Mavi.png" onclick="CardButton2()" width="300">
 
 
 <div class="mesaj">
     <p id="alanId">Kedi kartını bulmak için kartın üzerine tıklamalısın.</p>
-    <p id="kazandiId" style="display: none"></p>
-    <p id="yenildiId" style="display: none"></p>
+    <p id="kazandiId" style="display: none">Kazandın!! Tebrik ederiz :) Yeni bir oyun oynamak istersen
+        <a href="" onclick="sifirlama()">buraya</a> tıklayabilirsin.</p>
+    <p id="yenildiId" style="display: none">Kaybettin :( Yeni bir oyun oynamak istersen
+        <a href="" onclick="sifirlama()">buraya</a> tıklayabilirsin</p></p>
 </div>
 </body>
 </html>

@@ -1,14 +1,11 @@
 let firstTime2 = true;
 let firstTime3 = true;
 let firstTime = true;
-var control1 = false;
-var control2 = false;
-var control3 = false;
-var succes = false;
-let succesful = false;
+var kopeksayar = 0;
 var x;
 var y;
 var z;
+var HakSayac = 0;//kullanıcı hakkı için
 Rand();
 
 function Rand() {
@@ -23,12 +20,9 @@ function Rand() {
 
 function CardButton() {
     if (firstTime3) {
-
         firstTime3 = false;
         CardFunction();
-        if (control1) {
-            window.succes == true;
-        }
+
     }
 }
 
@@ -36,9 +30,6 @@ function CardButton1() {
     if (firstTime2) {
         firstTime2 = false;
         CardFunction1();
-        if (control2) {
-            window.succes == true;
-        }
     }
 }
 
@@ -46,72 +37,68 @@ function CardButton2() {
     if (firstTime) {
         firstTime = false;
         CardFunction2();
-        if (control3) {
-            window.succes == true;
-        }
     }
 }
 
 
 function CardFunction() {
-
-
-    if (x === 1) {
-        document.getElementById("img0").src = "kopek.png";
-    } else {
-        document.getElementById("img0").src = "kedi.png";
-        window.control1 == true;
+    HakSayac++;
+    if (HakSayac < 3) {
+        if (x === 1) {
+            document.getElementById("img0").src = "kopek.png";
+            kopeksayar++;
+            if (kopeksayar==2){
+                kaybetti();
+            }
+        } else {
+            document.getElementById("img0").src = "kedi.png";
+            kazandi();
+        }
     }
-
 }
 
 function CardFunction1() {
-
-
-    if (y === 1) {
-        document.getElementById("img1").src = "kopek.png";
-    } else {
-        document.getElementById("img1").src = "kedi.png";
-        window.control2 == true;
+    HakSayac++;
+    if (HakSayac < 3) {
+        if (y === 1) {
+            document.getElementById("img1").src = "kopek.png";
+            kopeksayar++;
+            if (kopeksayar==2){
+                kaybetti();
+            }
+        } else {
+            document.getElementById("img1").src = "kedi.png";
+            kazandi();
+        }
     }
 }
 
 function CardFunction2() {
-
-
-    if (z === 1) {
-        document.getElementById("img2").src = "kopek.png";
-    } else {
-        document.getElementById("img2").src = "kedi.png";
-        window.control3 == true;
-    }
-
-}
-
-if (firstTime===false && firstTime2===false && firstTime3===true) {
-    if (succes) {
-        succesful = true;
-        document.getElementById('alanId').innerHTML = 'Tebrikler Kazandınız';
-    } else {
-        document.getElementById('alanId').innerHTML = 'Başaramadık abi';
-    }
-
-}
-if (firstTime3===false && firstTime2===false && firstTime===true) {
-    if (succes) {
-        succesful = true;
-        document.getElementById('alanId').innerHTML = 'Tebrikler Kazandınız';
-    }else {
-        document.getElementById('alanId').innerHTML = 'Başaramadık abi';
+    HakSayac++;
+    if (HakSayac < 3) {
+        if (z === 1) {
+            document.getElementById("img2").src = "kopek.png";
+            kopeksayar++;
+            if (kopeksayar==2){
+                kaybetti();
+            }
+        } else {
+            document.getElementById("img2").src = "kedi.png";
+            kazandi();
+        }
     }
 }
-if (firstTime===false && !firstTime3===false && firstTime2===true) {
-    if (succes) {
-        succesful = true;
-        document.getElementById('alanId').innerHTML = 'Tebrikler Kazandınız';
-    } else {
-        document.getElementById('alanId').innerHTML = 'Başaramadık abi';
-    }
+
+function kaybetti() {
+        document.getElementById("alanId").style.display = "none";
+        document.getElementById("yenildiId").style.display = "inline";
+        HakSayac = 4;
+}
+
+function kazandi() {
+    document.getElementById("alanId").style.display = "none";
+    document.getElementById("kazandiId").style.display = "inline";
+    HakSayac = 4;
 }
 
 

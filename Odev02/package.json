@@ -1,9 +1,7 @@
 {
-  "name": "1030510085_BS435_WebProgramlama",
+  "name": "Odev002",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/GoktugFevziOzcelik/1030510085_BS435_WebProgramlama.git",
-  "author": "Goktug Ozcelik <esesli.fvz@gmail.com>",
+  "main": "kod.js",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
@@ -17,19 +15,22 @@
     "webpack-dev-server": "^4.4.0"
   },
   "engines": {
-    "node": "v16.14.1"
+    "node": "^14.0.0"
+  },
+  "babel": {
+"presets":[
+    "@babel/env"
+            ]
   },
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --open --mode development",
     "test": "jest --coverage"
   },
-
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.(js|jsx)"
     ],
-    "testRegex":"tests/./-test\\.(js|jsx)"
+    "testRegex": "tests/.*-test\\.(js|jsx)$"
   }
 }
-

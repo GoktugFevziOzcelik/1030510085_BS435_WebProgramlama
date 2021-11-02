@@ -11,10 +11,6 @@ module.exports = {
         library: "CardGame"
     },
 
-    devServer: {
-        contentBase: './public',
-        injectClient: false
-    },
 
     optimization: {
         minimize: true,

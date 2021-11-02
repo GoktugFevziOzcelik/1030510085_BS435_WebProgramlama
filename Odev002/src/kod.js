@@ -1,3 +1,4 @@
+
 let firstTime2 = true;
 let firstTime3 = true;
 let firstTime = true;
@@ -8,7 +9,7 @@ var z;
 var HakSayac = 0;//kullanıcı hakkı için
 Rand();
 
-function Rand() {
+export function Rand() {
     window.x = Math.floor(Math.random() * 2) + 1;
     window.y = Math.floor(Math.random() * 2) + 1;
     window.z = Math.floor(Math.random() * 2) + 1;
@@ -46,13 +47,13 @@ function CardFunction() {
     HakSayac++;
     if (HakSayac < 3) {
         if (x === 1) {
-            document.getElementById("img0").src = "kopek.png";
+            document.getElementById("img0").src = "../public/kopek.png";
             kopeksayar++;
             if (kopeksayar == 2) {
                 kaybetti();
             }
         } else {
-            document.getElementById("img0").src = "kedi.png";
+            document.getElementById("img0").src = "../public/kedi.png";
             kazandi();
         }
     }
@@ -62,13 +63,13 @@ function CardFunction1() {
     HakSayac++;
     if (HakSayac < 3) {
         if (y === 1) {
-            document.getElementById("img1").src = "kopek.png";
+            document.getElementById("img1").src = "../public/kopek.png";
             kopeksayar++;
             if (kopeksayar == 2) {
                 kaybetti();
             }
         } else {
-            document.getElementById("img1").src = "kedi.png";
+            document.getElementById("img1").src = "../public/kedi.png";
             kazandi();
         }
     }
@@ -78,13 +79,13 @@ function CardFunction2() {
     HakSayac++;
     if (HakSayac < 3) {
         if (z === 1) {
-            document.getElementById("img2").src = "kopek.png";
+            document.getElementById("img2").src = "../public/kopek.png";
             kopeksayar++;
             if (kopeksayar == 2) {
                 kaybetti();
             }
         } else {
-            document.getElementById("img2").src = "kedi.png";
+            document.getElementById("img2").src = "../public/kedi.png";
             kazandi();
         }
     }

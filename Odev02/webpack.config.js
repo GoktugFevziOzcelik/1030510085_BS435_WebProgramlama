@@ -11,7 +11,6 @@ module.exports = {
         library: "CardGame"
     },
 
-
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin({extractComments: false

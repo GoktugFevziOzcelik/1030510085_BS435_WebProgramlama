@@ -1,7 +1,9 @@
 {
-  "name": "Odev002",
+  "name": "1030510085_BS435_WebProgramlama",
   "version": "1.0.0",
   "main": "kod.js",
+  "repository": "https://github.com/GoktugFevziOzcelik/1030510085_BS435_WebProgramlama.git",
+  "author": "Goktug Ozcelik <esesli.fvz@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.16.0",

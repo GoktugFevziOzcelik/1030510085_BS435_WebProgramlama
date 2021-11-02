@@ -13,7 +13,7 @@ export function Rand() {
     window.x = Math.floor(Math.random() * 2) + 1;
     window.y = Math.floor(Math.random() * 2) + 1;
     window.z = Math.floor(Math.random() * 2) + 1;
-    var Cont = x + y + z;
+    const Cont = x + y + z;
     if (Cont > 4 || Cont === 3) {
         Rand();
 

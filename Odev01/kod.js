@@ -8,6 +8,7 @@ var z;
 var HakSayac = 0;//kullanıcı hakkı için
 Rand();
 
+
 function Rand() {
     window.x = Math.floor(Math.random() * 2) + 1;
     window.y = Math.floor(Math.random() * 2) + 1;
